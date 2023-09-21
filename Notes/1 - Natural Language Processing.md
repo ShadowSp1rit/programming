@@ -29,3 +29,17 @@ It will wait for the user to type something in and press Enter/Return
 ```python
 input()
 ```
+
+# Variables 
+Variables allow us to store information for the time our app is running .
+
+```python
+favourite_food = input("What is your favourite food? ")
+```
+
+favourite_food -> name of the variable
+= -> assignment operator
+input... -> value
+
+# [[Strings]]
+

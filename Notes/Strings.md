@@ -6,3 +6,50 @@ To create an f-string, we put an f before the opening quote.
 fave_food = input("What's your favourite food?")
 print(f"Oooooo, {fave_food} sounds good")
 ```
+
+# String Methods
+
+[[Methods]] are functions we can use on [[Objects]]
+
+String methods allow us to modify and work with strings.
+
+Say for example, we want to make all characters of a string lowercase
+
+```python
+mr_ubial_yelling = "PLEASE PUSH YOUR CHAIRS IN"
+
+print(mr_ubial_yelling.lower()) # lowercases the letters
+```
+
+The .lower() method takes a string and converts all UPPERCASE characters to lowercase
+
+We can use .lower() to help with semantic errors
+
+## .lower()
+converts all to lowercase
+
+## .upper()
+converts all lowercase to uppercase
+
+## .strip(str)
+
+The .strip() method removes characters from the beginning and the end of the string.
+
+```python
+user_feeling = input("How are you feeling?")
+
+# 'good', 'Good' 'GOOD'
+if user_feeling.lower().strip("!,.?") == "good":
+	print("That's great!")
+```
+
+## .split() -> List
+
+The .split() method splits a string into a [[Lists]], separating the string based on the characters you give it.
+
+```python
+grocery_str = "eggs, milk cheese hotwheels"
+
+grocery_list = grocery_str.split(" ")
+```
+

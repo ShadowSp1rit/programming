@@ -3,4 +3,4 @@
 # Date: Sept 25th, 2023
 
 # Output a message 
-print("Robot:Beep boop")
+print("Robot: BEEP BOOP!")

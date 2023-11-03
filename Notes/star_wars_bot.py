@@ -19,4 +19,4 @@ if cape.lower().strip("!,.?") == "yes":
     print("hmmm, the dark side seems like a good fit for you")
 elif cape and red_colour.lower().strip("!,.?") == "no":
     print("may you be in the path of the light")
-else: print("light side it is")
+else: print("Light side it is")

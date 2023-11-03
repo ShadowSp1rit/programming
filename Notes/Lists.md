@@ -1,7 +1,7 @@
 
 In Python, lists are a collection of items
 We store values inside of lists
-The values of the items can be of different [[Types]]
+The values of the items can be of different [[Type]]
 *Order Matters* in a list
 
 # Creating a List

@@ -14,8 +14,22 @@ We implemented the popularity likes paradigm with our Favourite Bubble Tea activ
 
 ## N-Point Rating System
 
-N-point rating systems are used by many service3s particularly Jeff Bezos's baby, Amazon
+N-point rating systems are used by many services particularly Jeff Bezos's baby, Amazon
 
 This paradigm provides more granular information. 
 Buyers are asked to rate a product on a five star scale. All the ratings are put together to formulate into five stars.
+
+## Similarity Score
+
+Amazon, Meta, TikTok, Netflix, all use similarity scores to help drive and keep users on their platforms.
+
+>Example
+> Amazon
+
+> Ubial likes "nintendo switch" etc
+> Ben also likes "nintendo switch" etc
+> Fido likes "lego" "chewtoys" "fuzzy slippers"
+
+Similarity scores, indicate how similar two people are to each other, so you can say that ben and ubial have the same similarity score of 2 (Both likes similar things) Ubial and fido dont have a similarity score, but ben and fido have 1 similarity point. 
+
 

@@ -5,9 +5,9 @@
 import turtle
 
 alfred_river_wilson = turtle.Turtle()
-alfred_river_wilson.color("lightblue")
+alfred_river_wilson.color("lightgreen")
 alfred_river_wilson.shape("turtle")
-alfred_river_wilson.shapesize(35)
+
 
 def squared(num: float) -> float:
     """Returns the given number squared"""
@@ -22,10 +22,54 @@ def draw_square(side_length: float) -> None:
 
 alfred_river_wilson.speed(0)
 
-# Create squares that get bigger and bigger
-# Draws from 1 until 19
-for i in range(40):
-    draw_square(squared(i))
+
+
+
+def draw_tree(level: int, height: int) -> None:
+    """A recursive function that draws a tree with inital given height
+    
+    Params:
+    
+    level - number representing lvels of branches
+    height - height of the main trunk in pixels
+    """
+
+    if level > 0:
+        # 1. Draw the branch
+        alfred_river_wilson.forward(height)
+
+        # 2. Turn to the left
+        alfred_river_wilson.left(39)
+
+        # 3. Draw a smaller tree (current level - 1)
+        draw_tree(level - 1, height / 1.5)
+
+        # 4. Turn to the right
+        alfred_river_wilson.right(39 * 2)
+
+        # 5. Draw a smaller tree (current level - 1)
+        draw_tree(level - 1, height / 1.5)
+
+        # 6. Move back to the beginning
+        alfred_river_wilson.left(39)
+        alfred_river_wilson.right(height)
+    else:
+        # create a level 0 tree, whcih is a leaf
+    
+        original_colour = alfred_river_wilson.color()
+        alfred_river_wilson.color("green")
+        alfred_river_wilson.stamp()
+        alfred_river_wilson.color(original_colour[0])
+
+alfred_river_wilson.left(90)
+alfred_river_wilson.seth(90)
+
+# Setting Turtle to draw the tree
+alfred_river_wilson.hideturtle
+alfred_river_wilson.setheading(90)
+alfred_river_wilson.color("brown")
+alfred_river_wilson.shape("arrow")
+
+draw_tree(10, 150)
 
 turtle.done()
-

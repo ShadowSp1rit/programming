@@ -11,20 +11,19 @@
 
 # It then returns a string of stars with the same length as the argument
 
-def row_of_stars(num_stars: int) -> None:
-    """Calculates the number of stars.
-    Results are in one line
-    
-    Params:
-    
-    sidelength - length of one row of the square"""
 
-    stars("*")
-    
-    return
-print("How many stars would you like?")
-stars =input()
-print(f"{row_of_stars}")
+def stars(num_stars: int) -> str:
+    """Returns a number of stars
+
+    Params:
+
+    num_stars - the number of stars to return
+    """
+
+    return "*" * num_stars
+
+print(stars(5))
+
 
 # Question 2
 
@@ -34,16 +33,70 @@ print(f"{row_of_stars}")
 
 # Call it "biggest_of_three"
 
-def biggest_of_three(numbers: float) -> None:
+def biggest_of_three(num_one: float, num_two: float, num_three: float) -> float:
     """Calculates the highest number out of three inputs.
     Result is the highest number.
     
     Params:
+    num_one - the first number
+    num_two - the second number
+    num_three - the third number
     
-    numbers - integers"""
+    Returns:
+    the biggest of the three numbers
+    """
 
-    biggest = numbers <= numbers
+    if num_one > num_two > num_three:
+        return num_one
+    elif num_two > num_three:
+        return num_two
+    else:
+        return num_three
 
-    return
+print(biggest_of_three(1000, 100, 10))
+print(biggest_of_three(100, 1000, 10))
+print(biggest_of_three(10, 100, 1000))
 
-    print(f"The highest number is {biggest_of_three}")
+# Question 3
+# Question 4
+# Create functions called pyramid() and pyramid_mirror()
+# Takes one number as a parameter
+# Give a pyramid either regular way or mirrored
+
+def pyramid(num_layers: int) -> None:
+    """Prints out a pyramid of given number of layers.
+
+    Params:
+    num_layers - number of layers in the pyramid
+    """
+
+    for current_layer in range(1, num_layers + 1):
+        print(stars(current_layer))
+
+
+pyramid(2)
+pyramid(3)
+pyramid(20)
+
+
+def pyramid_mirror(num_layers: int) -> None:
+    """Prints out a mirrored pyramid.
+
+    Params:
+    num_layers - number of layers of pyramid
+    """
+
+    for current_layer in range(1, num_layers + 1):
+        # Print the spaces then print the stars
+        # num_layers == 2
+        # " " * 1  +  stars(1)
+        # " " * 0   + stars(2)
+        # num_layers == 3
+        # " " * 2  + stars(1)
+        # " " * 1  + stars(2)
+        # " " * 0  + stars(3)
+        print(" " * (num_layers - current_layer) + stars(current_layer))
+
+
+pyramid_mirror(4)
+pyramid_mirror(20)

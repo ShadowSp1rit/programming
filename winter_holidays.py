@@ -22,7 +22,7 @@ def winter_holiday(good_or_bad: str) -> str:
         the event is selected randomly"""
     
     return good_or_bad
-
+    
 def main() -> None:
     print(winter_holiday("went to Osaka, experiencing a tour / explore sites"))
     print(winter_holiday("visited phillipines to see cousins, and relax"))

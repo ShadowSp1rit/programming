@@ -39,6 +39,8 @@ for y in range(jelly_bean_img.height):
             red_pixels.append((x, y))
         elif colour_helper.pixel_to_name(current_pixel) == "jelly bean green":
             green_pixels.append((x, y))
+        elif colour_helper.pixel_to_name(current_pixel) == "jelly bean blue":
+            blue_pixels.append((x, y))
 
 # Create a map of all red pixels "found"
 # Create a new image that stores the map
@@ -50,7 +52,7 @@ blue_pixel_map = Image.new("RGB", (orig_image_width, orig_image_height))
 
 # For every pixel location in the red_pixels list
 # Place a red pixel at that location
-for pixel_loc in green_pixels:
+for pixel_loc in blue_pixels:
     blue_pixel_map.putpixel(pixel_loc, BLUE_PIXEL)
 
 # Save the image

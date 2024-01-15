@@ -56,7 +56,7 @@ for pixel_loc in blue_pixels:
     blue_pixel_map.putpixel(pixel_loc, BLUE_PIXEL)
 
 # Save the image
-blue_pixel_map.save("./Images/green_pixel_map.jpg")
+blue_pixel_map.save("./Images/blue_pixel_map.jpg")
 blue_pixel_map.close()
 
 # Count all the locations of red pixels
